@@ -63,6 +63,9 @@ export const AboutContainer = styled.section`
     display: flex;
     flex-flow: row nowrap;
 
+    scroll-margin-top: 6rem;
+    //scroll-snap-margin-top: 6rem;
+
     padding: 5rem 7.4rem 5rem 7.4rem;
 
     > div {
@@ -100,6 +103,8 @@ export const SolutionsContainer = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    scroll-margin-top: 6rem;
     
     .solutions-bar {
         width: 100%;
@@ -167,6 +172,8 @@ export const PartnersContainer = styled.section`
     align-items: center;
     flex-direction: column;
     padding: 10rem 0 10rem 0;
+
+    scroll-margin-top: 6rem;
 
     h1 {
         font-size: 3.6rem;
