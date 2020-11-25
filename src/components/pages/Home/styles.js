@@ -104,7 +104,8 @@ export const SolutionsContainer = styled.section`
     .solutions-bar {
         width: 100%;
         height: 244px;
-        background-color: rgba(227,108,09,.5);
+        background-color: rgba(227,108,09,1);
+        z-index: -2;
 
         display: flex;
         flex-direction: row;
