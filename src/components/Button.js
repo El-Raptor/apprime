@@ -11,7 +11,7 @@ export const ButtonStyled = styled(Button)`
     transition: 0.3s;
 
     &:hover {
-        background: linear-gradient(to right, #1B5275, #AEC2E7);
+        //background: linear-gradient(to right, #1B5275, #AEC2E7);
         transform: translateY(-2px)
     }
 `;
