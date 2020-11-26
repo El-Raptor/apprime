@@ -1,6 +1,15 @@
 import React from "react";
-import { StyledForm } from "./styles";
-import { TextField, Paper } from "@material-ui/core";
+import {
+  FirstNameTextField,
+  LastNameTextField,
+  EmailWrapper,
+  NameWrapper,
+  StyledForm,
+  TitleWrapper,
+  ButtonWrapper,
+} from "./styles";
+import { TextField, Paper, Typography } from "@material-ui/core";
+import { ButtonStyled } from "../../Button";
 
 const Contact = () => {
   return (
@@ -8,23 +17,25 @@ const Contact = () => {
       <style>{"body { background-color:#F09949; }"}</style>
       <StyledForm>
         <Paper component="form" elevation={2}>
-          <div id="name">
-            <TextField
+          <TitleWrapper>
+            <Typography variant="h3">Contate-nos</Typography>
+          </TitleWrapper>
+          <NameWrapper>
+            <FirstNameTextField
               required
               id="first-name"
               label="Nome"
               variant="outlined"
-              style={{width: "40%"}}
             />
-            <TextField
+            <LastNameTextField
               required
+              className="last-name"
               id="last-name"
               label="Sobrenome"
               variant="outlined"
-              style={{width: "40%"}}
             />
-          </div>
-          <div>
+          </NameWrapper>
+          <EmailWrapper>
             <TextField
               required
               id="email"
@@ -32,7 +43,28 @@ const Contact = () => {
               variant="outlined"
               fullWidth
             />
-          </div>
+            <TextField
+              required
+              id="topic"
+              label="Assunto"
+              variant="outlined"
+              fullWidth
+            />
+            <TextField
+              required
+              id="message"
+              label="Mensagem"
+              variant="outlined"
+              multiline
+              rows={10}
+              fullWidth
+            />
+          </EmailWrapper>
+          <ButtonWrapper>
+            <ButtonStyled round large>
+              Enviar
+            </ButtonStyled>
+          </ButtonWrapper>
         </Paper>
       </StyledForm>
     </>
