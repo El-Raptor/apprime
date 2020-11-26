@@ -56,12 +56,12 @@ const Contact = () => {
               label="Mensagem"
               variant="outlined"
               multiline
-              rows={10}
+              rows={5}
               fullWidth
             />
           </EmailWrapper>
           <ButtonWrapper>
-            <ButtonStyled round large>
+            <ButtonStyled type="submit" round large>
               Enviar
             </ButtonStyled>
           </ButtonWrapper>

@@ -19,6 +19,12 @@ export const StyledForm = styled.div`
 
         .MuiTextField-root {
             margin: 1rem 0;
+
+            input, textarea {
+                font-size: 1.5rem;
+                padding: 1.5rem 1.5rem;
+                line-height: 1.59rem;
+            }
         }
 
         .last-name {
