@@ -5,7 +5,7 @@ import { StyledBox, LinksList } from "./styles";
 import image from "../../assets/images/logo.png";
 
 const NavBar = () => {
-const scrollToTop = () => window.scrollTo(0, 0);
+  const scrollToTop = () => window.scrollTo(0, 0);
 
   return (
     <>

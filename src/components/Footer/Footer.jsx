@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   AddressWrapper,
   ContactWrapper,
@@ -16,11 +17,19 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import logo from "../../assets/images/logo.png";
 
 const Footer = () => {
+  const scrollToTop = () => window.scrollTo(0, 0);
+
   return (
     <>
       <StyledBox component="footer">
         <LogoWrapper>
-          <FooterLogo src={logo} alt="apprime" />
+          <Link to="/">
+            <FooterLogo
+              src={logo}
+              alt="apprime"
+              onClick={() => scrollToTop()}
+            />
+          </Link>
         </LogoWrapper>
         <FooterWrapper>
           <FooterInfo>

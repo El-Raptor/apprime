@@ -39,7 +39,7 @@ export const FooterLogo = styled.img`
 export const LogoWrapper = styled.div`
     position: absolute;
     left: 1rem;
-    //height: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
 
