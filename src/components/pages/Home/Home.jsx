@@ -5,6 +5,14 @@ import {
   AboutContainer,
   SolutionsContainer,
   PartnersContainer,
+  HeroBg,
+  HeroContent,
+  AboutWrapper,
+  ImgWrapper,
+  HeroBg2,
+  SolutionsContent,
+  SolutionsBar,
+  Solutions,
 } from "./styles";
 import { Link } from "react-router-dom";
 import aboutImage from "../../../assets/images/about-image.png";
@@ -25,8 +33,8 @@ const Home = () => {
   return (
     <>
       <HeroContainer>
-        <div className="hero-container"></div>
-        <div className="hero-container-content">
+        <HeroBg></HeroBg>
+        <HeroContent>
           <Typography className="hero-container-slogan">
             Integre tudo em poucos cliques
           </Typography>
@@ -39,10 +47,10 @@ const Home = () => {
               Fale Conosco
             </Button>
           </Link>
-        </div>
+        </HeroContent>
       </HeroContainer>
       <AboutContainer id="about">
-        <div>
+        <AboutWrapper>
           <Typography color="primary" variant="h1">
             Quem Somos
           </Typography>
@@ -61,14 +69,14 @@ const Home = () => {
             consultoria, implementação e treinamentos, elevamos a satisfação das
             pessoas e melhoramos os resultados da sua empresa.
           </Typography>
-        </div>
-        <div>
+        </AboutWrapper>
+        <ImgWrapper>
           <img alt="sobre-nós" src={aboutImage} />
-        </div>
+        </ImgWrapper>
       </AboutContainer>
       <SolutionsContainer id="solutions">
-        <div className="hero-container-2"></div>
-        <div className="solutions-container-content">
+        <HeroBg2></HeroBg2>
+        <SolutionsContent>
           <Typography color="secondary" variant="h1">
             Soluções
           </Typography>
@@ -79,9 +87,9 @@ const Home = () => {
             informações estarão disponíveis a todo momento, basta haver uma
             conexão.
           </Typography>
-        </div>
-        <div className="solutions-bar">
-          <div className="solutions">
+        </SolutionsContent>
+        <SolutionsBar>
+          <Solutions>
             <img
               className="solutions-icon"
               alt="erp"
@@ -89,17 +97,19 @@ const Home = () => {
               width="120rem"
             />
             <Typography>Sistemas Integrados de Gestão</Typography>
-          </div>
-          <div className="solutions">
+          </Solutions>
+          <Solutions>
             <img
               className="solutions-icon"
               alt="crm"
               src={crm}
               width="120rem"
             />
-            <Typography>Administração do Relacionamento com o Cliente</Typography>
-          </div>
-          <div className="solutions">
+            <Typography>
+              Administração do Relacionamento com o Cliente
+            </Typography>
+          </Solutions>
+          <Solutions>
             <img
               className="solutions-icon"
               alt="pos"
@@ -107,12 +117,12 @@ const Home = () => {
               width="120rem"
             />
             <Typography>Ponto de Venda</Typography>
-          </div>
-          <div className="solutions">
+          </Solutions>
+          <Solutions>
             <img className="solutions-icon" alt="hr" src={hr} width="120rem" />
             <Typography>Recursos Humanos</Typography>
-          </div>
-          <div className="solutions">
+          </Solutions>
+          <Solutions>
             <img
               className="solutions-icon"
               alt="mobile"
@@ -120,12 +130,12 @@ const Home = () => {
               width="120rem"
             />
             <Typography>Mobile</Typography>
-          </div>
-          <div className="solutions">
+          </Solutions>
+          <Solutions>
             <img className="solutions-icon" alt="bi" src={bi} width="120rem" />
             <Typography>Inteligência de Negócios</Typography>
-          </div>
-        </div>
+          </Solutions>
+        </SolutionsBar>
       </SolutionsContainer>
       <PartnersContainer id="partners">
         <Typography variant="h1" color="primary">
@@ -133,10 +143,10 @@ const Home = () => {
         </Typography>
         <div className="partners-container">
           <div className="partners-logo">
-            <img src={bnl} alt="BnL" width="90px"/>
+            <img src={bnl} alt="BnL" width="90px" />
           </div>
           <div className="partners-logo">
-            <img src={ingen} alt="InGen" width="90px"/>
+            <img src={ingen} alt="InGen" width="90px" />
           </div>
           <div className="partners-logo">
             <img src={dinoco} alt="Dinoco" width="90px" />

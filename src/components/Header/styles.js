@@ -6,28 +6,32 @@ export const StyledBox = styled(Box)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5rem 0 5rem;
-
-    > div {
-        > a {
-            margin: 0 1em;
-            text-decoration: none;
-            cursor: pointer;
-            font-family: "Roboto";
-            font-size: 1.6rem;
-            
-            &:link, &:visited {
-                color: #1B5275;
-            }
-
-            &:hover {
-                color: #E36C09;
-            }
-        }
-    }
+    padding: 0 5rem 0 5rem;}
 
     .navbar-logo {
         cursor: pointer;
         width: 155px;
+    }
+`;
+
+export const LinksList = styled.div`
+    > a {
+        margin: 0 1em;
+        text-decoration: none;
+        cursor: pointer;
+        font-family: "Roboto";
+        font-size: 1.6rem;
+        
+        &:link, &:visited {
+            color: #1B5275;
+        }
+
+        &:hover {
+            color: #E36C09;
+        }
+    }
+
+    @media screen and (max-width: 890px) {
+        display: none;
     }
 `;
