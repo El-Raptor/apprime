@@ -60,7 +60,7 @@ export const ContactWrapper = styled.div`
 export const FooterLink = styled.a`
     text-decoration: none;
     color: #1B5275;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-size: 1.6rem;
     font-weight: 300;
 
@@ -79,7 +79,7 @@ export const AddressWrapper = styled.div`
 
 export const ReservedRights = styled.span`
     color: #858585;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
 `;
