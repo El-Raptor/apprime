@@ -13,6 +13,8 @@ import {
   SolutionsContent,
   SolutionsBar,
   Solutions,
+  PartnersWrapper,
+  PartnersLogo,
 } from "./styles";
 import { Link } from "react-router-dom";
 import aboutImage from "../../../assets/images/about-image.png";
@@ -141,26 +143,26 @@ const Home = () => {
         <Typography variant="h1" color="primary">
           Parceiros
         </Typography>
-        <div className="partners-container">
-          <div className="partners-logo">
+        <PartnersWrapper>
+          <PartnersLogo>
             <img src={bnl} alt="BnL" width="90px" />
-          </div>
-          <div className="partners-logo">
+          </PartnersLogo>
+          <PartnersLogo>
             <img src={ingen} alt="InGen" width="90px" />
-          </div>
-          <div className="partners-logo">
+          </PartnersLogo>
+          <PartnersLogo>
             <img src={dinoco} alt="Dinoco" width="90px" />
-          </div>
-          <div className="partners-logo">
+          </PartnersLogo>
+          <PartnersLogo>
             <img src={abstergo} alt="Abstergo Industries" width="90px" />
-          </div>
-          <div className="partners-logo">
+          </PartnersLogo>
+          <PartnersLogo>
             <img src={monstersInc} alt="Monsters Inc" width="90px" />
-          </div>
-          <div className="partners-logo">
+          </PartnersLogo>
+          <PartnersLogo>
             <img src={stark} alt="Stark Industries" width="90px" />
-          </div>
-        </div>
+          </PartnersLogo>
+        </PartnersWrapper>
       </PartnersContainer>
     </>
   );

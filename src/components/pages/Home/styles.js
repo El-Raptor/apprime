@@ -305,22 +305,28 @@ export const PartnersContainer = styled.section`
         font-weight: bold;
         margin-bottom: 5rem;
     }
+`;
 
-    .partners-container {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+export const PartnersWrapper = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+`;
 
-        .partners-logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 5rem;
-            
-            width: 208px;
-            height: 124px;
-            border-radius: 40px;
-            background-color: white;
-        }
+export const PartnersLogo = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    
+    width: 208px;
+    height: 124px;
+    border-radius: 40px;
+    background-color: white;
+    transition: 0.3s;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 2px 5px 9px 0px rgba(0,0,0,0.2);
     }
 `;
