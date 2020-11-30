@@ -187,7 +187,7 @@ export const SolutionsContainer = styled.section`
     scroll-margin-top: 6rem;
 
     @media screen and (max-width: 580px) {
-        height: 500px;
+        height: fit-content;
     }
 `;
 
@@ -249,13 +249,16 @@ export const SolutionsBar = styled.div`
     justify-content: space-between;
 
     @media screen and (max-width: 580px) {
-        height: 50px;
-        //display: none;
+        position: static;
+        bottom: auto;
+        z-index: auto;
+        height: fit-content;
+        flex-direction: column;
     }
-    @media screen and (max-width: 340px) {
+    /*@media screen and (max-width: 340px) {
         height: 20px;
         //display: none;
-    }
+    }*/
 `;
 
 export const Solutions = styled.div`
@@ -278,17 +281,18 @@ export const Solutions = styled.div`
         width: 7rem;
         height: 9rem;
 
-        p {        
-            font-size: 1rem;
-        }
+        p { font-size: 1rem; }
 
-        img {
-            width: 80px;
-        }
+        img { width: 80px; }
     }
 
     @media screen and (max-width: 580px) {
-        display: none;
+        width: 60%;
+        height: fit-content;
+        p { font-size: 1.8rem }
+        img { width: 18em }
+        margin-top: 3.5em;
+        margin-bottom: 3.5em;
     }
 `;
 
@@ -296,6 +300,7 @@ export const PartnersContainer = styled.section`
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 1em;
     padding: 10rem 0 10rem 0;
 
     scroll-margin-top: 6rem;
