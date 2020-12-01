@@ -31,14 +31,33 @@ export const StyledForm = styled.div`
             margin-left: 2rem;
         }
     }
+
+    @media screen and (max-width: 540px) {
+        height: 100%;
+        width: 100%;
+        form {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding-left: 10rem;
+        }
+    }
 `;
 
 export const FirstNameTextField = styled(TextField)`
     width: calc((${formWidth} - 2rem)/2);
+
+    @media screen and (max-width: 540px) {
+        width: calc((90% - 2rem)/2);
+    }
 `;
 
 export const LastNameTextField = styled(TextField)`
     width: calc((${formWidth} - 2rem)/2);
+    
+    @media screen and (max-width: 540px) {
+        width: calc((90% - 2rem)/2);
+    }
 `;
 
 export const NameWrapper = styled.div`
