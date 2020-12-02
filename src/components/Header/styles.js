@@ -7,15 +7,16 @@ export const StyledBox = styled(Box)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5rem 0 5rem;
+    padding: 0 5rem;
 
     .navbar-logo {
         cursor: pointer;
         width: 155px;
 
-        @media screen and (max-width: 890px) {
-            width:120px;
-        }
+    }
+    @media screen and (max-width: 890px) {
+        .navbar-logo { width:120px; }
+        padding: 0 2rem;  
     }
 `;
 

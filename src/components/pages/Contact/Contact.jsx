@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   FirstNameTextField,
   LastNameTextField,
@@ -7,22 +7,47 @@ import {
   StyledForm,
   TitleWrapper,
   ButtonWrapper,
+  CloseIcon,
+  Icon,
 } from "./styles";
-import { TextField, Paper, Typography } from "@material-ui/core";
-import { ButtonStyled } from "../../Button";
+import { TextField, Paper, Typography, Divider } from "@material-ui/core";
+import ButtonStyled from "../../Button";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const windowResize = () => {
+    if (window.innerWidth <= 540) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    windowResize();
+  }, []);
+
+  window.addEventListener("resize", windowResize);
+
   return (
     <>
-      <style>{"body { background-color:#F09949; }"}</style>
+      <Link to='/'>
+        <Icon>
+          <CloseIcon />
+        </Icon>
+      </Link>
       <StyledForm>
-        <Paper component="form" elevation={2}>
+        <Paper component="form" elevation={isMobile ? 0 : 2} square={isMobile}>
           <TitleWrapper>
-            <Typography variant="h3">Contate-nos</Typography>
+            <Typography variant="h1">CONTATE-NOS</Typography>
           </TitleWrapper>
+          <Divider />
           <NameWrapper>
             <FirstNameTextField
               required
+              className="first-name"
               id="first-name"
               label="Nome"
               variant="outlined"
@@ -61,8 +86,13 @@ const Contact = () => {
             />
           </EmailWrapper>
           <ButtonWrapper>
-            <ButtonStyled type="submit" round large>
-              Enviar
+            <ButtonStyled
+              type="submit"
+              elevation={!isMobile}
+              round={!isMobile}
+              size={isMobile ? "fullWidth" : "large"}
+            >
+              ENVIAR
             </ButtonStyled>
           </ButtonWrapper>
         </Paper>

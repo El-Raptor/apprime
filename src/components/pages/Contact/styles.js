@@ -1,19 +1,40 @@
 import styled from 'styled-components';
 import { TextField } from '@material-ui/core';
-
+import { FaTimes } from 'react-icons/fa';
 
 const formWidth = '400px';
+
+export const Icon = styled.div`
+    display: none;
+    padding-top: 2rem;
+    padding-right: 3rem;
+    padding-bottom: 1.2rem;
+    font-size: 2.5rem;
+    background: white;
+    cursor: pointer;
+    outline: none;
+
+    @media screen and (max-width: 540px) {
+        display: flex;
+        justify-content: flex-end; 
+    }
+`;
+
+export const CloseIcon = styled(FaTimes)`
+    color: #1B5275;
+`;
 
 export const StyledForm = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #F09949;
     //height: calc(100vh - 185px - 64px);
 
     form {
         width: ${formWidth};
         height: fit-content;
-
+        box-sizing: border-box;
         margin: 2rem 0;
         padding: 2rem 4rem;  
 
@@ -28,7 +49,12 @@ export const StyledForm = styled.div`
         }
 
         .last-name {
+            margin-top: 2rem;
             margin-left: 2rem;
+        }
+
+        .first-name {
+            margin-top: 2rem;
         }
     }
 
@@ -39,24 +65,24 @@ export const StyledForm = styled.div`
             height: 100%;
             width: 100%;
             margin: 0;
-            padding-left: 10rem;
+            padding: 3rem;
         }
     }
 `;
 
 export const FirstNameTextField = styled(TextField)`
-    width: calc((${formWidth} - 2rem)/2);
+    width: calc((${formWidth} - 10em)/2);
 
     @media screen and (max-width: 540px) {
-        width: calc((90% - 2rem)/2);
+        width: calc((100% - 2rem)/2);
     }
 `;
 
 export const LastNameTextField = styled(TextField)`
-    width: calc((${formWidth} - 2rem)/2);
+    width: calc((${formWidth} - 10rem)/2);
     
     @media screen and (max-width: 540px) {
-        width: calc((90% - 2rem)/2);
+        width: calc((100% - 2rem)/2);
     }
 `;
 
@@ -71,12 +97,12 @@ export const EmailWrapper = styled.div`
 export const TitleWrapper = styled.div`
     width: 100%;
     display: flex;
-    justify-content: center;
     margin-bottom: 2rem;
 
-    h3 {
-        color: #1B5275;
-        font-weight: 300;
+    h1 {
+        color: #979797;
+        font-size: 2.6rem;
+        font-weight: 400;
     }
 `;
 
