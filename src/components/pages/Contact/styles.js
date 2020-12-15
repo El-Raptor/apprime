@@ -27,9 +27,10 @@ export const CloseIcon = styled(FaTimes)`
 export const StyledForm = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: #F09949;
-    //height: calc(100vh - 185px - 64px);
+    height: 100vh;
 
     form {
         width: ${formWidth};

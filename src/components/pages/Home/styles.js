@@ -156,7 +156,7 @@ export const AboutWrapper = styled.div`
     }
 
     @media screen and (max-width: 600px) {
-       p { text-align: justify; }
+       p { text-align: left; }
     }
 
 `;
@@ -229,7 +229,7 @@ export const SolutionsContent = styled.div`
     @media screen and (max-width: 1040px) { padding: 5rem 15rem; }
     @media screen and (max-width: 860px) { padding: 5rem 5rem; }
     @media screen and (max-width: 600px) {
-        > p { text-align: justify; }
+        > p { text-align: left; }
     }
     @media screen and (max-width: 500px) {
         > p { font-size: 1.8rem; }

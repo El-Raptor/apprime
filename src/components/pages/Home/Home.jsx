@@ -1,12 +1,9 @@
 import React from "react";
-import { Typography, Button } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import {
-  HeroContainer,
   AboutContainer,
   SolutionsContainer,
   PartnersContainer,
-  HeroBg,
-  HeroContent,
   AboutWrapper,
   ImgWrapper,
   HeroBg2,
@@ -16,7 +13,7 @@ import {
   PartnersWrapper,
   PartnersLogo,
 } from "./styles";
-import { Link } from "react-router-dom";
+import HeroContainer from "../../HeroContainer";
 import aboutImage from "../../../assets/images/about-image.png";
 import erp from "../../../assets/images/erp.png";
 import crm from "../../../assets/images/crm.png";
@@ -34,23 +31,7 @@ import stark from "../../../assets/images/stark.png";
 const Home = () => {
   return (
     <>
-      <HeroContainer>
-        <HeroBg></HeroBg>
-        <HeroContent>
-          <Typography className="hero-container-slogan">
-            Integre tudo em poucos cliques
-          </Typography>
-          <Typography className="hero-container-descr">
-            Aumente sua eficiência de trabalho integrando as suas soluções de
-            forma fácil e automática.
-          </Typography>
-          <Link to="/contact">
-            <Button variant="contained" color="primary">
-              Fale Conosco
-            </Button>
-          </Link>
-        </HeroContent>
-      </HeroContainer>
+      <HeroContainer></HeroContainer>
       <AboutContainer id="about">
         <AboutWrapper>
           <Typography color="primary" variant="h1">
